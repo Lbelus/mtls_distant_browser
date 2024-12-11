@@ -25,7 +25,10 @@ scp <username>@<ipAddress>:~/<dir>/client.p12 .
 ```
 4. Install the cert on your browser;
 
-5. Connect to your server with at https://<your-IP-address>
+5. Connect to your server with your local browser at: 
+```
+https://<your-server-IP-address>
+```
 
 6. Enjoy and navigate safely.
 
