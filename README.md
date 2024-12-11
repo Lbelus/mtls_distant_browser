@@ -21,7 +21,7 @@ It's a simple Nginx/docker configuration to support mtls without having to own a
 
 3. Download your client p12 file with scp to your machine;  
 ```sh
-scp <username>@<ipAddress>:~/b_in_c/client.p12 .
+scp <username>@<ipAddress>:~/<dir>/client.p12 .
 ```
 4. Install the cert on your browser;
 
