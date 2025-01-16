@@ -32,4 +32,25 @@ https://<your-server-IP-address>
 
 6. Enjoy and navigate safely.
 
+
+## Option run your traffic through SOCKS5 proxy
+
+Source : 
+- https://shadowsocks.org/
+- https://github.com/shadowsocks
+- https://github.com/shadowsocks/badvpn
+
+1. On a separate server, install shadowsock: 
+```
+apt update
+apt install shadowsocks-libev
+```
+2. initiate the server: 
+```
+ss-server -s 0.0.0.0 -p 8388 -k yourpassword -m aes-256-gcm
+```
+
+Use badvpn as a client instead of the classic shadowsock client
+
+
 * [Lorris BELUS](//github.com/Lbelus) - Developer
