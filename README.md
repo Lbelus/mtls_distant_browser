@@ -16,7 +16,7 @@ This project introduces a simple Nginx/Docker configuration to support mTLS with
 
 2. Run the following scripts in sequence:
    - `badvpn_to_bin.sh`: Sets up the **BadVPN** utility to enable a VPN-like tunnel for secure communication. It compiles and installs BadVPN binaries to ensure your containerized browser operates in a private and controlled network environment.
-   - `ss_x_tor.sh`: Configures **Shadowsocks** and **Tor** to anonymize your network traffic and provide an additional layer of security and privacy when using the browser in the container.
+   - `ss_x_tor.sh`: Configures **Shadowsocks**, **redsocks**, and **Tor** to anonymize your network traffic and provide an additional layer of security and privacy when using the browser in the container.
    - `mtls_browser.sh`: 
      - Creates the server and client certificates.
      - Configures Nginx for mTLS.
@@ -48,11 +48,6 @@ graph LR
     F -->|Exit Node| G[Internet]
 ```
 
-### Key Points:
-- **Local Browser** connects to the Nginx Proxy using HTTPS with mTLS for secure authentication.
-- **Nginx Proxy** forwards traffic to the Dockerized Browser container.
-- **Shadowsocks** acts as a secure proxy, routing traffic through the **Tor Network** for anonymity.
-- **BadVPN Tunnel** ensures a secure and private communication channel.
 
 
 * [Lorris BELUS](https://github.com/Lbelus) - Developer
