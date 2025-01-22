@@ -42,7 +42,7 @@ This project introduces a simple Nginx/Docker configuration to support mTLS with
 graph LR
     A[User Browser] -->|HTTPS + mTLS| B[Server 00: Nginx Proxy]
     B -->|BadVPN Tunnel| C[Dockerized Browser]
-    B -->|Traffic Forwarding| D[Server 01: SOCKS5 Proxy]
+    C -->|Traffic Forwarding| D[Server 01: SOCKS5 Proxy]
     D -->|SOCKS5 to Redsocks| E[Redsocks]
     E -->|Tor Routing| F[Tor Network]
     F -->|Exit Node| G[Internet]
