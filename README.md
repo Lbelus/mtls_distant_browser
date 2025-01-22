@@ -56,4 +56,3 @@ graph LR
 
 
 * [Lorris BELUS](https://github.com/Lbelus) - Developer
-```
