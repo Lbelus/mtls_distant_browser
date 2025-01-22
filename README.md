@@ -40,12 +40,12 @@ This project introduces a simple Nginx/Docker configuration to support mTLS with
 
 ```mermaid
 graph LR
-    A[Local Browser] -->|HTTPS + mTLS| B[Nginx Proxy]
-    B -->|Encrypted Traffic| C[Dockerized Browser]
-    C -->|Proxy Connection| D[Shadowsocks]
-    D -->|Anonymized Traffic| E[Tor Network]
-    E -->|Exit Node| F[Internet]
-    G[BadVPN Tunnel] -.-> B
+    A[User Browser] -->|HTTPS + mTLS| B[Server "00": Nginx Proxy]
+    B -->|BadVPN Tunnel| C[Dockerized Browser]
+    B -->|Traffic Forwarding| D[Server "01": SOCKS5 Proxy]
+    D -->|SOCKS5 to Redsocks| E[Redsocks]
+    E -->|Tor Routing| F[Tor Network]
+    F -->|Exit Node| G[Internet]
 ```
 
 ### Key Points:
