@@ -15,6 +15,6 @@ docker cp "$CONTAINER_NAME:/output/." "$OUTPUT_DIR"
 
 echo "Cleaning up..."
 docker rm $CONTAINER_NAME
-docker rmi $IMAGE_NAME
+docker image rm $IMAGE_NAME
 
 echo "BadVPN binaries have been extracted to: $OUTPUT_DIR"
